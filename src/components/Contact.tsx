@@ -80,11 +80,13 @@ export default function Contact() {
                 </div>
                 <div className={`row ${bad.email ? "bad" : ""}`}>
                   <label htmlFor="f-email">Email</label>
+                  {/* extensions (temp-mail etc.) inject attributes here pre-hydration */}
                   <input
                     id="f-email"
                     name="email"
                     type="email"
                     autoComplete="email"
+                    suppressHydrationWarning
                   />
                   <div className="err">That email doesn&apos;t look right.</div>
                 </div>
